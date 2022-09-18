@@ -12,13 +12,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <section className='pt-10 pr-52'>
-          <div className='flex items-center pl-14 gap-20'>
-            <Logo />
-            <h3 className='text-primary text-xl'>Hi, my name is</h3>
+        <section className='grid grid-cols-6 gap-x-5 pt-10'>
+          <div className='col-start-1 place-self-center'>
+          <Logo />
           </div>
-          <div className='pl-52'>
-            <h1 className='text-primary-lighter text-6xl pt-5'>Charbel Fayad.</h1>
+          <h3 className='text-primary text-xl col-start-2 col-span-4 self-center'>Hi, my name is</h3>
+          <h1 className='text-primary-lighter text-6xl col-start-2 col-span-4'>Charbel Fayad.</h1>
+
+          <div className='col-start-2 col-span-4'>
             <Shell />
           </div>
         </section>
