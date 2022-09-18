@@ -6,55 +6,29 @@ module.exports = {
   ],
   darkMode: 'media',
   theme: {
-    extend: {
-      screens: {
-        'xs' : '400px'
+    colors: {
+      primary: {
+        DEFAULT: '#2E9025',
+        light: '#2ACA3E',
+        lighter: '#CDF7D6',
+        greyish: '#A6B1A9',
       },
-      colors: {
-        primary: {
-          lighter: '#9af7ff',
-          light: '#64c4e2',
-          DEFAULT: '#2793b0',
-          dark: '#006580',
-          darker: '#003b53'
-        },
-        secondary: {
-          lighter: '#ffff83',
-          light: '#eaff4e',
-          DEFAULT: '#b4cc00',
-          dark: '#809b00',
-          darker: '#4f6d00',
-        },
-        gray: colors.slate,
-        blue: {
-          lighter: '#9af7ff',
-          light: '#64c4e2',
-          DEFAULT: '#2693b0',
-          dark: '#006580',
-          darker: '#003b53'
-        }
-      },
-      fontFamily: {
-        // sans: [
-        //   'Nunito',
-        //   'ui-sans-serif',
-        //   'system-ui',
-        //   '-apple-system',
-        //   'BlinkMacSystemFont',
-        //   '"Segoe UI"',
-        //   'Roboto',
-        //   '"Helvetica Neue"',
-        //   'Arial',
-        //   '"Noto Sans"',
-        //   'sans-serif',
-        //   '"Apple Color Emoji"',
-        //   '"Segoe UI Emoji"',
-        //   '"Segoe UI Symbol"',
-        //   '"Noto Color Emoji"',
-        // ],
-        // serif: ['Overlock', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      red: '#FD6059',
+      yellow: '#FFC13F',
+
+      blue: {
+        DEFAULT: '#17191D',
+        light: '#1C1E23',
+        lighter: '#27282E',
       }
     },
+    screens: {
+      'xs' : '400px'
+    },
+    fontFamily: {
+      'sans': ['Consolas', 'monospace'],
+      'consolas': ['Consolas', 'monospace'],
+    }
   },
   variants: {
     extend: {
@@ -62,6 +36,5 @@ module.exports = {
     }
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio')
   ],
 }
