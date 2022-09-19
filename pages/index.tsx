@@ -15,13 +15,13 @@ const Home: NextPage = () => {
 
       <main>
         <section className="grid grid-cols-6 gap-x-5 pt-10">
-          <div className="col-start-1 place-self-center">
+          <div className="col-start-1 place-self-center animate-[slide-left_0.2s_ease-in-out]">
             <Logo />
           </div>
-          <h3 className="text-primary text-xl col-start-2 col-span-4 self-center">
+          <h3 className="text-primary text-xl col-start-2 col-span-4 self-center animate-[slide-left_0.2s_ease-in-out]">
             Hi, my name is
           </h3>
-          <h1 className="text-primary-lighter text-6xl col-start-2 col-span-4">Charbel Fayad.</h1>
+          <h1 className="text-primary-lighter text-6xl col-start-2 col-span-4 animate-[slide-left_0.2s_ease-in-out]">Charbel Fayad.</h1>
 
           <div className="col-start-2 col-span-4">
             {showShell && <Shell setShowShell={setShowShell} />}
