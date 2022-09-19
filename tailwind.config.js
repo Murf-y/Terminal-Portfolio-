@@ -6,6 +6,16 @@ module.exports = {
   ],
   darkMode: 'media',
   theme: {
+    keyframes: {
+      'slide-up-grow': {
+        '0%': {
+          transform: 'translateY(100%) scale(0)',
+        },
+        '100%': {
+          transform: 'translateY(0) scale(1)',
+        }
+      },
+    },
     colors: {
       primary: {
         DEFAULT: '#2E9025',

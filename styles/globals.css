@@ -3,10 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Consolas';
-    src: url('../public/fonts/CONSOLA.TTF');
+  font-family: 'Consolas';
+  src: url('../public/fonts/CONSOLA.TTF');
 }
 
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 text-primary-light
+            py-2 text-sm uppercase rounded cursor-pointer border-primary
+            border focus:outline-none focus:ring-2 focus:ring-primary
+            hover:bg-primary-lighter hover:text-blue;
+  }
+}
 #nprogress .bar {
-    background: var(--primary);
+  background: var(--primary);
 }
