@@ -1,7 +1,7 @@
 import useCommand from '@hooks/useCommand'
 import useDidMount from '@hooks/useDidMount'
 import { COMMANDS_TEMPLATE } from '@models/commands'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 import { threadId } from 'worker_threads'
 import LineIcon from './icons/LineIcon'
@@ -19,6 +19,9 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
 
   const input = useRef(null)
   const shellRef = useRef(null)
+
+
+  const router = useRouter();
 
   useDidMount(() => {
     commandsAtStartup.forEach((command) => processCommand(command))
@@ -64,7 +67,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   const showMarkdown = (command: string) => {
     const fileName = command.split(' ')[1]
 
-    Router.push('/about')
+    router.push(`/${fileName.split('.')[0]}`)
     return COMMANDS_TEMPLATE.SHOW
   }
 
@@ -98,7 +101,6 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
           <input
             ref={input}
             type="text"
-            defaultValue={"SHOW about.md"}
             className="bg-blue-light w-full outline-none m-0 text-primary inline-flex"
             onKeyUp={(e) => {
               handleInputKeyUp(e)
