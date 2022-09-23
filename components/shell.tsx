@@ -1,5 +1,6 @@
 import useCommand from '@hooks/useCommand'
 import useDidMount from '@hooks/useDidMount'
+import { COMMANDS_TEMPLATE } from '@models/commands'
 import Router from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 import { threadId } from 'worker_threads'
@@ -17,6 +18,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   let [linesToBeDisplayed, setLinesToBeDisplayed] = useState<String[]>(shellInit)
 
   const input = useRef(null)
+  const shellRef = useRef(null)
 
   useDidMount(() => {
     commandsAtStartup.forEach((command) => processCommand(command))
@@ -34,7 +36,21 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
       const rawCommand = inputCurrentRef.value
       processCommand(rawCommand)
       inputCurrentRef.value = ''
+      scrollDown()
     }
+  }
+
+  const scrollDown = () => {
+    if (shellRef.current) {
+      const shellRefCurrent = shellRef.current as HTMLDivElement
+      window.requestAnimationFrame(function () {
+        shellRefCurrent.scrollTo(
+          0,
+          shellRefCurrent.scrollHeight + (shellRefCurrent.lastElementChild?.scrollHeight ?? 0) + 200
+        )
+      })
+    }
+    
   }
 
   const processCommand = (rawCommand) => {
@@ -46,14 +62,15 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   }
 
   const showMarkdown = (command: string) => {
-    
-    return ""
+    const fileName = command.split(' ')[1]
+
+    Router.push('/about')
+    return COMMANDS_TEMPLATE.SHOW
   }
 
   const openFile = (command: string) => {
-    console.log(command)
 
-    return ""
+    return COMMANDS_TEMPLATE.OPEN
   }
 
   const clear = () => {
@@ -72,7 +89,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
           }}
         />
       </div>
-      <div className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg">
+      <div className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg" ref={shellRef}>
         {linesToBeDisplayed.map((line, i) => (
           <p key={i} className={line.startsWith("C:\\") ? "pt-4": ""}>{line}</p>
         ))}

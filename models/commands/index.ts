@@ -1,6 +1,6 @@
 const COMMANDS_TEMPLATE = {
-  HELP: 'SHOW ---- Display a Markdown file (.md)\nOPEN ---- Opens an executabe or pdf (.exe, .pdf)',
-  DIR: ' Directory of C:\\Users\\Murf\n == about.md\n == projects.md\n == contact.exe\n == resume.pdf',
+  HELP: 'SHOW ---- Display a Markdown file (.md)\nOPEN ---- Opens an executabe or pdf (.pdf, .exe)',
+  DIR: ' Directory of C:\\Users\\Murf\n --- about.md\n --- projects.md\n --- contact.exe\n --- resume.pdf',
   SHOW: 'Loading ...\nShowing...',
   OPEN: 'Loading ...\nOpening...',
   CLEAR: '',
