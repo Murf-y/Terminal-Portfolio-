@@ -16,5 +16,5 @@
   }
 }
 #nprogress .bar {
-  background: var(--primary);
+  background: theme('colors.primary.light') !important;
 }

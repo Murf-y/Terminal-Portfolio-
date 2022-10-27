@@ -1,4 +1,4 @@
-import { availableFiles, availableMarkdown, COMMANDS_TEMPLATE, COMMAND_NOT_FOUND, FILE_NOT_FOUND, INTERACTIVE_COMMANDS } from '@models/commands'
+import { availableFiles, availableMarkdown, COMMANDS_TEMPLATE, COMMAND_NOT_FOUND, FILE_NOT_FOUND, INTERACTIVE_COMMANDS } from '@models/command'
 
 const useCommand = (
   rawCommand: string,

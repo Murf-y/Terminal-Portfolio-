@@ -1,7 +1,7 @@
 import useCommand from '@hooks/useCommand'
 import useDidMount from '@hooks/useDidMount'
-import { COMMANDS_TEMPLATE } from '@models/commands'
-import Router, { useRouter } from 'next/router'
+import { COMMANDS_TEMPLATE } from '@models/command'
+import Router from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 import { threadId } from 'worker_threads'
 import LineIcon from './icons/LineIcon'
@@ -20,8 +20,6 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   const input = useRef(null)
   const shellRef = useRef(null)
 
-
-  const router = useRouter();
 
   useDidMount(() => {
     commandsAtStartup.forEach((command) => processCommand(command))
@@ -67,7 +65,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   const showMarkdown = (command: string) => {
     const fileName = command.split(' ')[1]
 
-    router.push(`/${fileName.split('.')[0]}`)
+    Router.push(`/${fileName.split('.')[0]}`)
     return COMMANDS_TEMPLATE.SHOW
   }
 

@@ -1,0 +1,12 @@
+{
+  "default_image_path": "/images/placeholder.png",
+
+  "projects": [
+    {
+      "title": "Attractors Simulation",
+      "image_path": "/images/attractors-simulation",
+      "tags": "",
+      "link": ""
+    }
+  ]
+}

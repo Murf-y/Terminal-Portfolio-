@@ -1,0 +1,41 @@
+import Markdown from '@components/markdown'
+import { Project } from '@models/project'
+import projects_json from '../public/data/projects.json'
+import { NextPage } from 'next'
+import Head from 'next/head'
+import ProjectSlider from '@components/projectSlider'
+
+const PorjectsPage: NextPage = () => {
+  let projects: Project[] = []
+  
+  projects_json.projects.map((project) => {
+    projects.push({
+      title: project.title,
+      image_path: project.image_path,
+      tags: project.tags,
+      link: project.link,
+    })
+  })
+  return (
+    <>
+      <Head>
+        <title>Murf Portfolio | Projects</title>
+      </Head>
+      <div className="min-h-screen bg-blue ">
+        <main>
+          <section className="grid grid-cols-8 gap-x-5 pt-5">
+            <div className="col-start-2 col-span-6">
+              {
+                <Markdown fileName="projects">
+                  <ProjectSlider projects={projects}/>
+                </Markdown>
+              }
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+  )
+}
+
+export default PorjectsPage
