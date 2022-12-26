@@ -39,15 +39,15 @@ const AboutPage: NextPage = () => {
                       <br />
                       Here are a few technologies I've been working with recently:
                       <div className="flex gap-16 md:gap-36 justify-start items-center mt-10">
-                        <ul className="marker:text-primary list-inside list-disc">
-                          <li className='whitespace-nowrap'>Nextjs</li>
-                          <li className='whitespace-nowrap'>Typescript</li>
-                          <li className='whitespace-nowrap'>Strapi</li>
+                        <ul className="marker:text-primary list-inside list-disc underline">
+                          <li className="whitespace-nowrap">Nextjs</li>
+                          <li className="whitespace-nowrap">Typescript</li>
+                          <li className="whitespace-nowrap">Strapi</li>
                         </ul>
-                        <ul className="marker:text-primary list-inside list-disc">
-                          <li className='whitespace-nowrap'>Flutter</li>
-                          <li className='whitespace-nowrap'>Unity</li>
-                          <li className='whitespace-nowrap'>Postgresql</li>
+                        <ul className="marker:text-primary list-inside list-disc underline">
+                          <li className="whitespace-nowrap">Flutter</li>
+                          <li className="whitespace-nowrap">Unity</li>
+                          <li className="whitespace-nowrap">Postgresql</li>
                         </ul>
                       </div>
                     </div>

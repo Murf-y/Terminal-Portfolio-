@@ -7,15 +7,17 @@ import ProjectSlider from '@components/projectSlider'
 
 const PorjectsPage: NextPage = () => {
   let projects: Project[] = []
-  
+
   projects_json.projects.map((project) => {
     projects.push({
       title: project.title,
-      image_path: project.image_path,
+      image_path:
+        project.image_path.length == 0 ? projects_json.default_image_path : project.image_path,
       tags: project.tags,
-      link: project.link,
+      link: project.link.length == 0 ? projects_json.default_link : project.link,
     })
   })
+
   return (
     <>
       <Head>
@@ -27,7 +29,7 @@ const PorjectsPage: NextPage = () => {
             <div className="col-start-2 col-span-6">
               {
                 <Markdown fileName="projects">
-                  <ProjectSlider projects={projects}/>
+                  <ProjectSlider projects={projects} />
                 </Markdown>
               }
             </div>

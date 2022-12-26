@@ -3,23 +3,24 @@ import useDidMount from '@hooks/useDidMount'
 import { COMMANDS_TEMPLATE } from '@models/command'
 import Router from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
-import { threadId } from 'worker_threads'
 import LineIcon from './icons/LineIcon'
 import SquareIcon from './icons/SquareIcon'
 import XIcon from './icons/XIcon'
 
-const shellInit = ['Portfolio [Version 2.0.4]', '(c) Murf-y Corporation. All rights reserved']
+const shellInit = ['Portfolio [Version 2.0.3]', '(c) Murf-y Corporation. All rights reserved']
 
 const shellUser = 'C:\\Users\\Murf>'
 
 const commandsAtStartup = ['dir', 'help']
 
 const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
-  let [linesToBeDisplayed, setLinesToBeDisplayed] = useState<String[]>(shellInit)
+  const [linesToBeDisplayed, setLinesToBeDisplayed] = useState<string[]>(shellInit)
+
+  const [prevCommands, setPrevCommands] = useState<string[]>([])
+  const [prevCommandsIndex, setPrevCommandsIndex] = useState<number>(0)
 
   const input = useRef(null)
   const shellRef = useRef(null)
-
 
   useDidMount(() => {
     commandsAtStartup.forEach((command) => processCommand(command))
@@ -32,12 +33,33 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   }, [])
 
   const handleInputKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'ArrowUp') {
+      if (prevCommandsIndex > 0) {
+        setPrevCommandsIndex((prev) => prev - 1)
+        if (input.current) {
+          const inputCurrentRef = input.current as HTMLInputElement
+          inputCurrentRef.value = prevCommands[prevCommandsIndex - 1]
+        }
+      }
+    }
+    if (e.key === 'ArrowDown') {
+      if (prevCommandsIndex < prevCommands.length - 1) {
+        setPrevCommandsIndex((prev) => prev + 1)
+        if (input.current) {
+          const inputCurrentRef = input.current as HTMLInputElement
+          inputCurrentRef.value = prevCommands[prevCommandsIndex + 1]
+        }
+      }
+    }
+
     if (e.key === 'Enter' && input.current) {
       const inputCurrentRef = input.current as HTMLInputElement
       const rawCommand = inputCurrentRef.value
       processCommand(rawCommand)
       inputCurrentRef.value = ''
       scrollDown()
+      setPrevCommands((prev) => [...prev, rawCommand])
+      setPrevCommandsIndex((prev) => prev + 1)
     }
   }
 
@@ -51,14 +73,14 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
         )
       })
     }
-    
   }
 
   const processCommand = (rawCommand) => {
-    const commandResponse: string = useCommand(rawCommand, showMarkdown, openFile, clear);
-    const commandResponseInLines: string[] = commandResponse.split('\n');
+    const commandResponse: string = useCommand(rawCommand, showMarkdown, openFile, clear)
+    const commandResponseInLines: string[] = commandResponse.split('\n')
     let commandsResponsePlusRequestLines = [shellUser + ' ' + rawCommand]
-    commandsResponsePlusRequestLines = commandsResponsePlusRequestLines.concat(commandResponseInLines)
+    commandsResponsePlusRequestLines =
+      commandsResponsePlusRequestLines.concat(commandResponseInLines)
     setLinesToBeDisplayed((lines) => [...lines, ...commandsResponsePlusRequestLines])
   }
 
@@ -70,7 +92,6 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   }
 
   const openFile = (command: string) => {
-
     return COMMANDS_TEMPLATE.OPEN
   }
 
@@ -90,9 +111,14 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
           }}
         />
       </div>
-      <div className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg" ref={shellRef}>
+      <div
+        className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg"
+        ref={shellRef}
+      >
         {linesToBeDisplayed.map((line, i) => (
-          <p key={i} className={line.startsWith("C:\\") ? "pt-4": ""}>{line}</p>
+          <p key={i} className={line.startsWith('C:\\') ? 'pt-4' : ''}>
+            {line}
+          </p>
         ))}
         <div className="flex gap-2 pt-4">
           {shellUser}

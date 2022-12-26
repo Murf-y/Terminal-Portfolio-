@@ -1,11 +1,35 @@
 {
   "default_image_path": "/images/placeholder.png",
-
+  "default_link": "#",
   "projects": [
     {
       "title": "Attractors Simulation",
-      "image_path": "/images/attractors-simulation",
-      "tags": "",
+      "image_path": "",
+      "tags": ["canvas2D", "math"],
+      "link": ""
+    },
+    {
+      "title": "Attractors Simulation",
+      "image_path": "",
+      "tags": ["canvas2D", "math"],
+      "link": ""
+    },
+    {
+      "title": "Attractors Simulation",
+      "image_path": "",
+      "tags": ["canvas2D", "math"],
+      "link": ""
+    },
+    {
+      "title": "Attractors Simulation",
+      "image_path": "",
+      "tags": ["canvas2D", "math"],
+      "link": ""
+    },
+    {
+      "title": "Attractors Simulation",
+      "image_path": "",
+      "tags": ["canvas2D", "math"],
       "link": ""
     }
   ]

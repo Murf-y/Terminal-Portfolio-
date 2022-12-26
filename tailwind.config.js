@@ -3,8 +3,9 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media',
   theme: {
-    boxShadow:{
-      '3xl': '9px 13px 7px -5px #2E9025'
+    boxShadow: {
+      '3xl': '9px 13px 7px -5px #2E9025',
+      xl: '1px 1px 10px -1px',
     },
     keyframes: {
       'slide-up-grow': {
