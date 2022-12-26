@@ -92,9 +92,14 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   }
 
   const openFile = (command: string) => {
+    console.log(command)
     const file = command.split(' ')[1]
     if (file === 'resume.pdf') {
       window.open('/data/resume.pdf', '_blank')
+    }
+
+    if (file === 'contact.exe') {
+      window.open('mailto:charbel.fayad01@lau.edu?subject=Greetings', '_blank')
     }
     return COMMANDS_TEMPLATE.OPEN
   }
