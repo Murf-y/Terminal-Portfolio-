@@ -12,10 +12,10 @@ const AboutPage: NextPage = () => {
       <div className="min-h-screen bg-blue ">
         <main>
           <section className="grid grid-cols-8 gap-x-5 pt-5">
-            <div className="col-start-1 col-span-8 mx-4 md:col-start-2 md:col-span-6">
+            <div className=" mx-4 col-start-1 col-span-8 md:col-start-2 md:col-span-6">
               {
                 <Markdown fileName="about">
-                  <div className="flex flex-row justify-between items-center w-full min-h-full h-fit py-2 md:py-10 px-2 md:px-7">
+                  <div className="flex flex-col-reverse xl:flex-row justify-between items-center w-full min-h-full h-fit py-2 md:py-10 px-2 md:px-7">
                     <div className="h-full w-full text-primary-greyish md:pr-8 text-lg">
                       Hello! My name is <strong className="text-primary">Charbel</strong> and I
                       enjoy creating things that live on the internet. Currently pursuing a
@@ -38,7 +38,7 @@ const AboutPage: NextPage = () => {
                       <br />
                       <br />
                       Here are a few technologies I've been working with recently:
-                      <div className="flex gap-16 md:gap-36 justify-start items-center mt-10">
+                      <div className="flex gap-16 md:gap-36 flex-col md:flex-row justify-start items-start md:items-center mt-10">
                         <ul className="marker:text-primary list-inside list-disc underline">
                           <li className="whitespace-nowrap">Nextjs</li>
                           <li className="whitespace-nowrap">Typescript</li>

@@ -18,3 +18,14 @@
 #nprogress .bar {
   background: theme('colors.primary.light') !important;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: theme('colors.blue.light');
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme('colors.blue.lighter');
+  border-radius: 10px;
+  border: 3px solid theme('colors.blue.DEFAULT');
+}

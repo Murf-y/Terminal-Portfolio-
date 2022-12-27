@@ -25,8 +25,8 @@ const PorjectsPage: NextPage = () => {
       </Head>
       <div className="min-h-screen bg-blue ">
         <main>
-          <section className="grid grid-cols-8 gap-x-5 pt-5">
-            <div className="col-start-2 col-span-6">
+          <section className="grid grid-cols-8 gap-x-5 pt-5 px-4">
+            <div className="col-start-1 col-span-8 md:col-start-2 md:col-span-6">
               {
                 <Markdown fileName="projects">
                   <ProjectSlider projects={projects} />

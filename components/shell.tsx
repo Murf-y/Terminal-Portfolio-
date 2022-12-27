@@ -111,7 +111,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   }
   return (
     <div className="my-6 w-full transition-all animate-[slide-up-grow_0.5s_ease-in-out]">
-      <div className="bg-blue-lighter h-12 px-5 rounded-t-2xl flex justify-end items-center gap-3">
+      <div className="bg-blue-lighter h-12 px-5 rounded-t-2xl flex justify-end items-center gap-3 border-b-blue border-b-4">
         <LineIcon />
         <SquareIcon />
         <XIcon
@@ -121,7 +121,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
         />
       </div>
       <div
-        className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg"
+        className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg scrollbar"
         ref={shellRef}
       >
         {linesToBeDisplayed.map((line, i) => (

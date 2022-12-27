@@ -12,6 +12,8 @@ const projectSlider: FC<{ projects: Project[] }> = ({ projects }) => {
       setSlidesPerView(3)
     } else if (window.innerWidth > 1080) {
       setSlidesPerView(2)
+    } else if (window.innerWidth > 650) {
+      setSlidesPerView(1.5)
     } else {
       setSlidesPerView(1)
     }
@@ -19,6 +21,7 @@ const projectSlider: FC<{ projects: Project[] }> = ({ projects }) => {
 
   return (
     <>
+      {/* vertical */}
       <Swiper
         style={{ paddingLeft: '10%', marginTop: '5%' }}
         spaceBetween={10}
@@ -43,8 +46,8 @@ const projectSlider: FC<{ projects: Project[] }> = ({ projects }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="mt-16 text-primary">$ Click on a project to view it</div>
-      <div className="mt-10 text-primary">$ Swipe to view more projects</div>
+      <div className="mt-[5rem] text-primary">$ Click on a project to view it</div>
+      <div className="mt-8 text-primary">$ Swipe to view more projects</div>
     </>
   )
 }
