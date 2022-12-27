@@ -1,7 +1,7 @@
 # Terminal Portfolio <img src="public/images/Logo.png" width="50px">
 
-![Build Status](https://img.shields.io/netlify/c9cce46e-0324-44ba-a696-3c52f6576ddf)
-![BSD3 license](https://img.shields.io/badge/license-MIT-blue.svg)
+![Build Status](https://img.shields.io/netlify/c9cce46e-0324-44ba-a696-3c52f6576ddf?logo=netlify&style=for-the-badge)
+![BSD3 license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
 
 [Live Preview](https://murfy.netlify.app/)
 
