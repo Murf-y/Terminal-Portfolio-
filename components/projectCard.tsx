@@ -10,7 +10,7 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
 
   return (
     <div
-      className="border-primary border-4 rounded-md w-72 shadow-primary shadow-xl cursor-pointer"
+      className="border-primary border-4 rounded-md w-56 md:w-72 shadow-primary shadow-xl cursor-pointer"
       onClick={() => {
         window.open(project.link, '_blank')
       }}

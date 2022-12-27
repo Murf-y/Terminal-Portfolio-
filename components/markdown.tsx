@@ -11,13 +11,13 @@ const Markdown = (props: {
   return (
     <div className="my-6 w-full transition-all animate-[slide-up-grow_0.5s_ease-in-out]">
       <div className="bg-blue-lighter h-12 px-5 rounded-t-2xl flex justify-between items-center">
-        <p className="text-3xl text-primary-lighter capitalize">{props.fileName}.md</p>
+        <p className="text-2xl md:text-3xl text-primary-lighter capitalize">{props.fileName}.md</p>
         <div className="flex items-center gap-3">
           <LineIcon />
           <SquareIcon />
           <XIcon
             onClick={() => {
-              Router.back();
+              Router.back()
             }}
           />
         </div>

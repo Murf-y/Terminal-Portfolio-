@@ -12,7 +12,7 @@ const projectSlider: FC<{ projects: Project[] }> = ({ projects }) => {
       setSlidesPerView(3)
     } else if (window.innerWidth > 1080) {
       setSlidesPerView(2)
-    } else if (window.innerWidth > 650) {
+    } else if (window.innerWidth > 650 && window.innerWidth < 768) {
       setSlidesPerView(1.5)
     } else {
       setSlidesPerView(1)

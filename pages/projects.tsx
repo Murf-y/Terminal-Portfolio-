@@ -4,6 +4,9 @@ import projects_json from '../public/data/projects.json'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import ProjectSlider from '@components/projectSlider'
+import { useCallback } from 'react'
+import { loadFull } from 'tsparticles'
+import Particles from 'react-particles'
 
 const PorjectsPage: NextPage = () => {
   let projects: Project[] = []
@@ -18,13 +21,25 @@ const PorjectsPage: NextPage = () => {
     })
   })
 
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine)
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine)
+  }, [])
+
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container)
+  }, [])
+
   return (
     <>
       <Head>
         <title>Murf Portfolio | Projects</title>
       </Head>
       <div className="min-h-screen bg-blue ">
-        <main>
+        <main className="relative z-50">
           <section className="grid grid-cols-8 gap-x-5 pt-5 px-4">
             <div className="col-start-1 col-span-8 md:col-start-2 md:col-span-6">
               {
@@ -35,6 +50,12 @@ const PorjectsPage: NextPage = () => {
             </div>
           </section>
         </main>
+        <Particles
+          id="tsparticles"
+          url="/data/particlesjs-config.json"
+          init={particlesInit}
+          loaded={particlesLoaded}
+        ></Particles>
       </div>
     </>
   )

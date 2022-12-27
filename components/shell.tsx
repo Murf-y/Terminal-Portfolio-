@@ -121,7 +121,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
         />
       </div>
       <div
-        className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-lg scrollbar"
+        className="bg-blue-light text-primary min-h-fit h-[28rem] rounded-b-2xl p-3 overflow-auto text-sm md:text-lg scrollbar"
         ref={shellRef}
       >
         {linesToBeDisplayed.map((line, i) => (
