@@ -33,7 +33,7 @@ const projectSlider: FC<{ projects: Project[] }> = ({ projects }) => {
             } else {
               swiper.slideNext(1000)
             }
-          }, 2000)
+          }, 1000000)
 
           return () => {
             clearInterval(timer)

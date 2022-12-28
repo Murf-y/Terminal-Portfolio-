@@ -3,34 +3,52 @@
   "default_link": "#",
   "projects": [
     {
-      "title": "Attractors Simulation",
-      "image_path": "",
-      "tags": ["canvas2D", "math"],
-      "link": ""
+      "title": "Tourify",
+      "image_path": "../images/projects/tourify.png",
+      "tags": ["AngularJs", "Ionic", "PHP"],
+      "link": "https://github.com/Murf-y/Tourify"
     },
     {
       "title": "Attractors Simulation",
-      "image_path": "",
+      "image_path": "../images/projects/attractor].png",
       "tags": ["canvas2D", "math"],
-      "link": ""
+      "link": "https://github.com/Murf-y/Attractors-Simulation"
     },
     {
-      "title": "Attractors Simulation",
-      "image_path": "",
-      "tags": ["canvas2D", "math"],
-      "link": ""
+      "title": "Groupify",
+      "image_path": "../images/projects/groupigy.png",
+      "tags": ["JAVA", "PHP"],
+      "link": "https://github.com/Murf-y/Groupify"
     },
     {
-      "title": "Attractors Simulation",
-      "image_path": "",
-      "tags": ["canvas2D", "math"],
-      "link": ""
+      "title": "Dollar Rate API ",
+      "image_path": "../images/projects/fastapi.png",
+      "tags": ["FASTAPI", "BeautifulSoup"],
+      "link": "https://github.com/Murf-y/LBP-DollarRate-API"
     },
     {
-      "title": "Attractors Simulation",
-      "image_path": "",
-      "tags": ["canvas2D", "math"],
-      "link": ""
+      "title": "LyricsHub",
+      "image_path": "../images/projects/lyrics.png",
+      "tags": ["React", "Vercel"],
+      "link": "https://github.com/Murf-y/LyricsHub"
+    },
+    {
+      "title": "MandelbrotSet",
+      "image_path": "../images/projects/madelbrot.png",
+      "tags": ["Csharp", "Visualizer"],
+      "link": "https://github.com/Murf-y/MandelbrotSet-Visualizer"
+    },
+    {
+      "title": "Terminal-Portofolio",
+      "image_path": "../images/projects/terminal.png",
+      "tags": ["NextJs", "Tailwind"],
+      "link": "https://github.com/Murf-y/Terminal-Portofolio"
+    },
+    {
+      "title": "USD-Rate-App",
+      "image_path": "../images/projects/usd_rate.png",
+      "tags": ["Flutter", "Dart"],
+      "link": "https://github.com/Murf-y/USD-Rate-App"
     }
   ]
 }
