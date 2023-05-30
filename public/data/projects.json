@@ -3,16 +3,34 @@
   "default_link": "#",
   "projects": [
     {
-      "title": "Tourify",
-      "image_path": "../images/projects/tourify.png",
-      "tags": ["AngularJs", "Ionic", "PHP"],
-      "link": "https://github.com/Murf-y/Tourify"
+      "title": "NinjaCo",
+      "image_path": "../images/projects/ninjaco.png",
+      "tags": ["arduino", "visual programming"],
+      "link": "https:ninja-co.live"
     },
     {
       "title": "Attractors Simulation",
       "image_path": "../images/projects/attractor].png",
       "tags": ["canvas2D", "math"],
       "link": "https://github.com/Murf-y/Attractors-Simulation"
+    },
+    {
+      "title": "Enum Dirbuster",
+      "image_path": "../images/projects/enum.png",
+      "tags": ["multithreaded", "dirbuster"],
+      "link": "https://github.com/Murf-y/Enum-Dirbuster"
+    },
+    {
+      "title": "Pacman Heuristic",
+      "image_path": "../images/projects/pacman.png",
+      "tags": ["Genetic Algorithm", "A*"],
+      "link": "https://github.com/Murf-y/Pacman-Search-Evalution"
+    },
+    {
+      "title": "Tourify",
+      "image_path": "../images/projects/tourify.png",
+      "tags": ["AngularJs", "Ionic", "PHP"],
+      "link": "https://github.com/Murf-y/Tourify"
     },
     {
       "title": "Groupify",
@@ -25,6 +43,12 @@
       "image_path": "../images/projects/fastapi.png",
       "tags": ["FASTAPI", "BeautifulSoup"],
       "link": "https://github.com/Murf-y/LBP-DollarRate-API"
+    },
+    {
+      "title": "USD-Rate-App",
+      "image_path": "../images/projects/usd_rate.png",
+      "tags": ["Flutter", "Dart"],
+      "link": "https://github.com/Murf-y/USD-Rate-App"
     },
     {
       "title": "LyricsHub",
@@ -43,12 +67,6 @@
       "image_path": "../images/projects/terminal.png",
       "tags": ["NextJs", "Tailwind"],
       "link": "https://github.com/Murf-y/Terminal-Portofolio"
-    },
-    {
-      "title": "USD-Rate-App",
-      "image_path": "../images/projects/usd_rate.png",
-      "tags": ["Flutter", "Dart"],
-      "link": "https://github.com/Murf-y/USD-Rate-App"
     }
   ]
 }
