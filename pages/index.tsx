@@ -5,12 +5,12 @@ import Logo from '@components/icons/Logo'
 import { useState, useCallback } from 'react'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-particles'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   const [showShell, setShowShell] = useState<boolean>(true)
 
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine)
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -18,7 +18,6 @@ const Home: NextPage = () => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container)
   }, [])
 
   return (
@@ -33,8 +32,16 @@ const Home: NextPage = () => {
           <div className="col-start-2 md:col-start-1 place-self-center animate-[slide-left_0.2s_ease-in-out]">
             <Logo />
           </div>
-          <h3 className="text-primary text-xl col-start-3 md:col-start-2 col-span-4 self-center animate-[slide-left_0.2s_ease-in-out]">
+          <h3 className="text-primary text-xl col-start-3 md:col-start-2 col-span-3 self-center animate-[slide-left_0.2s_ease-in-out]">
             Hi, my name is
+          </h3>
+          <h3 className="hidden sm:flex gap-5  text-xl col-start-5 w-full justify-between col-span-1 self-center animate-[slide-left_0.2s_ease-in-out]">
+            <Link className='text-primary underline' href="/about">
+              About
+            </Link>
+            <Link className='text-primary underline' href="/projects">
+              Projects
+            </Link>
           </h3>
           <h1 className="text-primary-lighter text-2xl md:text-3xl col-start-2 col-span-4 mt-2 md:mt-0 animate-[slide-left_0.2s_ease-in-out]">
             Charbel Fayad.
