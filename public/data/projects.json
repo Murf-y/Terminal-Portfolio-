@@ -9,6 +9,12 @@
       "link": "https:ninja-co.live"
     },
     {
+      "title": "Network Models Visualizer",
+      "image_path": "../images/projects/network.png",
+      "tags": ["network-science", "js"],
+      "link": "https://murf-y.github.io/NetworkModelsVisualization/"
+    },
+    {
       "title": "Attractors Simulation",
       "image_path": "../images/projects/attractor].png",
       "tags": ["canvas2D", "math"],
