@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { useCallback, useEffect } from 'react'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-particles'
-import { sendGTMEvent } from '@next/third-parties/google'
 
 const AboutPage: NextPage = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -15,10 +14,6 @@ const AboutPage: NextPage = () => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {}, [])
-
-  useEffect(() => {
-    sendGTMEvent({ event: 'page_view', pagePath: '/about' })
-  }, [])
 
   return (
     <>

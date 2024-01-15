@@ -1,11 +1,7 @@
 import Head from 'next/head'
-import { sendGTMEvent } from '@next/third-parties/google'
 import { useEffect } from 'react'
 
 export default function FourOhFour(): React.ReactElement {
-  useEffect(() => {
-    sendGTMEvent({ event: 'page_view', pagePath: '/404' })
-  }, [])
   return (
     <>
       <Head>

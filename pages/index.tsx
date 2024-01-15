@@ -6,7 +6,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-particles'
 import Link from 'next/link'
-import { sendGTMEvent } from '@next/third-parties/google'
+import { event } from 'nextjs-google-analytics'
 
 const Home: NextPage = () => {
   const [showShell, setShowShell] = useState<boolean>(true)
@@ -19,10 +19,6 @@ const Home: NextPage = () => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {}, [])
-
-  useEffect(() => {
-    sendGTMEvent({ event: 'page_view', pagePath: '/' })
-  }, [])
 
   return (
     <div className="min-h-screen bg-blue ">
@@ -44,7 +40,9 @@ const Home: NextPage = () => {
               className="text-primary underline"
               href="/about"
               onClick={() => {
-                sendGTMEvent({ event: 'link_click', link: '/about' })
+                event('link_click', {
+                  label: '/about',
+                })
               }}
             >
               About
@@ -53,7 +51,9 @@ const Home: NextPage = () => {
               className="text-primary underline"
               href="/projects"
               onClick={() => {
-                sendGTMEvent({ event: 'link_click', link: '/projects' })
+                event('link_click', {
+                  label: '/projects',
+                })
               }}
             >
               Projects
@@ -72,7 +72,9 @@ const Home: NextPage = () => {
               className="col-start-1 col-span-full place-self-center justify-self-center btn mt-72"
               onClick={() => {
                 setShowShell(true)
-                sendGTMEvent({ event: 'button_click', button: 'open_shell' })
+                event('button_click', {
+                  label: 'open_shell',
+                })
               }}
             >
               Open Shell

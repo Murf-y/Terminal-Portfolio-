@@ -7,7 +7,6 @@ import ProjectSlider from '@components/projectSlider'
 import { useCallback, useEffect } from 'react'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-particles'
-import { sendGTMEvent } from '@next/third-parties/google'
 
 const PorjectsPage: NextPage = () => {
   let projects: Project[] = []
@@ -30,10 +29,6 @@ const PorjectsPage: NextPage = () => {
   }, [])
 
   const particlesLoaded = useCallback(async (container) => {}, [])
-
-  useEffect(() => {
-    sendGTMEvent({ event: 'page_view', pagePath: '/projects' })
-  }, [])
 
   return (
     <>

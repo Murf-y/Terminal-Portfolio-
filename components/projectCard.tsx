@@ -1,6 +1,6 @@
 import { Project } from '@models/project'
 import React, { FC } from 'react'
-import { sendGTMEvent } from '@next/third-parties/google'
+import { event } from 'nextjs-google-analytics'
 
 const ProjectCard: FC<{ project: Project }> = ({ project }) => {
   const getTagColor = () => {
@@ -13,7 +13,10 @@ const ProjectCard: FC<{ project: Project }> = ({ project }) => {
     <div
       className="flex flex-col justify-betweenborder-primary border-4 rounded-md w-[14.5rem] md:w-72 h-80 shadow-primary shadow-xl cursor-pointer"
       onClick={() => {
-        sendGTMEvent({ event: 'project_click', project: project.title })
+        event('project_click', {
+          label: project.title,
+        })
+
         window.open(project.link, '_blank')
       }}
     >
