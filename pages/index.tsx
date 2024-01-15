@@ -2,10 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Shell from '@components/shell'
 import Logo from '@components/icons/Logo'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-particles'
 import Link from 'next/link'
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const Home: NextPage = () => {
   const [showShell, setShowShell] = useState<boolean>(true)
@@ -17,7 +18,10 @@ const Home: NextPage = () => {
     await loadFull(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container) => {
+  const particlesLoaded = useCallback(async (container) => {}, [])
+
+  useEffect(() => {
+    sendGTMEvent({ event: 'page_view', pagePath: '/' })
   }, [])
 
   return (
@@ -36,10 +40,22 @@ const Home: NextPage = () => {
             Hi, my name is
           </h3>
           <h3 className="hidden sm:flex gap-5  text-xl col-start-5 w-full justify-between col-span-1 self-center animate-[slide-left_0.2s_ease-in-out]">
-            <Link className='text-primary underline' href="/about">
+            <Link
+              className="text-primary underline"
+              href="/about"
+              onClick={() => {
+                sendGTMEvent({ event: 'link_click', link: '/about' })
+              }}
+            >
               About
             </Link>
-            <Link className='text-primary underline' href="/projects">
+            <Link
+              className="text-primary underline"
+              href="/projects"
+              onClick={() => {
+                sendGTMEvent({ event: 'link_click', link: '/projects' })
+              }}
+            >
               Projects
             </Link>
           </h3>
@@ -56,6 +72,7 @@ const Home: NextPage = () => {
               className="col-start-1 col-span-full place-self-center justify-self-center btn mt-72"
               onClick={() => {
                 setShowShell(true)
+                sendGTMEvent({ event: 'button_click', button: 'open_shell' })
               }}
             >
               Open Shell

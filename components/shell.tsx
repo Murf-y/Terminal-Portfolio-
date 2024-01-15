@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import LineIcon from './icons/LineIcon'
 import SquareIcon from './icons/SquareIcon'
 import XIcon from './icons/XIcon'
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const shellInit = ['Portfolio [Version 2.0.3]', '(c) Murf-y Corporation. All rights reserved']
 
@@ -56,6 +57,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
       const inputCurrentRef = input.current as HTMLInputElement
       const rawCommand = inputCurrentRef.value
       processCommand(rawCommand)
+      sendGTMEvent({ event: 'enter_command', command: rawCommand })
       inputCurrentRef.value = ''
       scrollDown()
       setPrevCommands((prev) => [...prev, rawCommand])
@@ -92,7 +94,6 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
   }
 
   const openFile = (command: string) => {
-
     const file = command.split(' ')[1]
     if (file === 'resume.pdf') {
       window.open('/data/resume.pdf', '_blank')
@@ -117,6 +118,7 @@ const Shell: React.FC<{ setShowShell }> = ({ setShowShell }) => {
         <XIcon
           onClick={() => {
             setShowShell(false)
+            sendGTMEvent({ event: 'button_click', button: 'close_shell' })
           }}
         />
       </div>

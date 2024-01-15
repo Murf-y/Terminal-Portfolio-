@@ -4,7 +4,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
-      "@models/*": ["models/*"]
+      "@models/*": ["models/*"],
+      "@next/third-parties/google": [ "./node_modules/@next/third-parties/dist/google" ]
     },
     "target": "es5",
     "lib": [

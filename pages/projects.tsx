@@ -4,9 +4,10 @@ import projects_json from '../public/data/projects.json'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import ProjectSlider from '@components/projectSlider'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-particles'
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const PorjectsPage: NextPage = () => {
   let projects: Project[] = []
@@ -28,7 +29,10 @@ const PorjectsPage: NextPage = () => {
     await loadFull(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container) => {
+  const particlesLoaded = useCallback(async (container) => {}, [])
+
+  useEffect(() => {
+    sendGTMEvent({ event: 'page_view', pagePath: '/projects' })
   }, [])
 
   return (
