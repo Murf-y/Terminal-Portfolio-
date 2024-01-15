@@ -3,6 +3,12 @@
   "default_link": "#",
   "projects": [
     {
+      "title": "Smoll 🔗",
+      "image_path": "../images/projects/smoll.png",
+      "tags": ["Shortner", "solidjs", "mongodb"],
+      "link": "https://github.com/Murf-y/smoll"
+    },
+    {
       "title": "NinjaCo",
       "image_path": "../images/projects/ninjaco.png",
       "tags": ["arduino", "visual programming"],
