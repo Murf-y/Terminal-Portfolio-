@@ -12,7 +12,7 @@
       "title": "NinjaCo",
       "image_path": "../images/projects/ninjaco.png",
       "tags": ["arduino", "visual programming"],
-      "link": "https://ninja-co.live"
+      "link": "https://ninjaco.vercel.app/"
     },
     {
       "title": "Network Models Visualizer",
