@@ -29,36 +29,51 @@ const AboutPage: NextPage = () => {
                   <div className="flex flex-col-reverse xl:flex-row justify-between items-center w-full min-h-full h-fit py-2 md:py-10 px-2 md:px-7">
                     <div className="h-full w-full text-primary-greyish md:pr-8 text-lg">
                       Hello! My name is <strong className="text-primary">Charbel</strong> and I
-                      enjoy creating things that live on the internet. Currently pursuing a
-                      bacheloars degree in{' '}
-                      <strong className="text-primary">computer science</strong> at LAU.
+                      enjoy creating things that live on the internet. Currently working as Software
+                      Integration Engineer at{' '}
+                      <a className="text-primary" href="https://www.murex.com/en">
+                        Murex
+                      </a>
+                      .
                       <br />
-                      <br />I have experience i nearly all fields of development, starting from web
-                      through mobile till game development. You can find projects related to these
-                      in
-                      <strong className="text-primary"> projects.md</strong>.<br />
                       <br />
-                      Accademically, i am enrolled in the honors program with a{' '}
+                      Experienced in various areas of software development, with a primary focus on
+                      web development. I have also worked in mobile development, game development,
+                      and machine learning research. You can find related projects in
+                      <strong className="text-primary"> projects.md</strong>.
+                      <br />
+                      <br />
+                      Academically, I graduated from the honors program with a
                       <strong className="text-primary"> 3.97 </strong>
-                      CGPA.
+                      CGPA, earned a place on the High Distinction list, and received the Honors
+                      Award.
                       <br />
                       <br />
-                      Experience wise, i did a 3 month intrenship as a Full Stack developer
-                      <strong className="text-primary"> @ajjerni.com</strong> and currently looking
-                      for a new one!
+                      Professionally, I currently work as an Integration Engineer, managing over
+                      eighty internal and external systems—both on-premises and in the cloud—using
+                      Mulesoft and Anypoint. I have completed two software engineering internships
+                      at
+                      <a className="text-primary" href="https://ninjaco.vercel.app/">
+                        NinjaCO
+                      </a>
+                      and
+                      <a className="text-primary" href="https://www.ajjerni.com/">
+                        Ajjerni
+                      </a>
+                      , where I deepened my experience in full-stack development.
                       <br />
                       <br />
                       Here are a few technologies I've been working with recently:
                       <div className="flex gap-16 md:gap-36 flex-col md:flex-row justify-start items-start md:items-center mt-10">
                         <ul className="marker:text-primary list-inside list-disc underline">
-                          <li className="whitespace-nowrap">Nextjs</li>
-                          <li className="whitespace-nowrap">Typescript</li>
+                          <li className="whitespace-nowrap">NextJs</li>
+                          <li className="whitespace-nowrap">NestJs</li>
                           <li className="whitespace-nowrap">Strapi</li>
                         </ul>
                         <ul className="marker:text-primary list-inside list-disc underline">
                           <li className="whitespace-nowrap">Flutter</li>
                           <li className="whitespace-nowrap">Unity</li>
-                          <li className="whitespace-nowrap">Postgresql</li>
+                          <li className="whitespace-nowrap">MuleSoft</li>
                         </ul>
                       </div>
                     </div>

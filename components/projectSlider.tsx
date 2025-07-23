@@ -23,7 +23,7 @@ const projectSlider: FC<{ projects: Project[] }> = ({ projects }) => {
     <>
       {/* vertical */}
       <Swiper
-        style={{ paddingLeft: '10%', marginTop: '5%' }}
+        style={{ paddingLeft: '20%', marginTop: '5%' }}
         spaceBetween={10}
         slidesPerView={slidesPerView}
         onSwiper={(swiper) => {

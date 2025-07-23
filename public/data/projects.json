@@ -3,6 +3,12 @@
   "default_link": "#",
   "projects": [
     {
+      "title": "Socrat",
+      "image_path": "../images/projects/socrat.png",
+      "tags": ["Philosophy", "WebRTC"],
+      "link": "https://socrat.vercel.app/"
+    },
+    {
       "title": "Smoll 🔗",
       "image_path": "../images/projects/smoll.png",
       "tags": ["Shortner", "solidjs", "mongodb"],
