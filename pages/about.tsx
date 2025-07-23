@@ -38,8 +38,7 @@ const AboutPage: NextPage = () => {
                       <br />
                       <br />
                       Experienced in various areas of software development, with a primary focus on
-                      web development. I have also worked in mobile development, game development,
-                      and machine learning research. You can find related projects in
+                      web development. You can find related projects in
                       <strong className="text-primary"> projects.md</strong>.
                       <br />
                       <br />
@@ -50,16 +49,16 @@ const AboutPage: NextPage = () => {
                       <br />
                       <br />
                       Professionally, I currently work as an Integration Engineer, managing over
-                      eighty internal and external systems—both on-premises and in the cloud—using
+                      eighty internal and external systems both on-premises and in the cloud, using
                       Mulesoft and Anypoint. I have completed two software engineering internships
-                      at
+                      at{' '}
                       <a className="text-primary" href="https://ninjaco.vercel.app/">
                         NinjaCO
-                      </a>
-                      and
+                      </a>{' '}
+                      and{' '}
                       <a className="text-primary" href="https://www.ajjerni.com/">
                         Ajjerni
-                      </a>
+                      </a>{' '}
                       , where I deepened my experience in full-stack development.
                       <br />
                       <br />
@@ -81,7 +80,7 @@ const AboutPage: NextPage = () => {
                       <div className="w-fit h-fit rounded-lg border-4 border-primary">
                         <img
                           className="rounded-lg -translate-x-3 -translate-y-3 md:-translate-y-5 md:-translate-x-5 "
-                          src="/images/profile2.jpg"
+                          src="/images/profile2.jpeg"
                         ></img>
                       </div>
                     </div>
