@@ -26,28 +26,46 @@ const AboutPage: NextPage = () => {
             <div className=" mx-4 col-start-1 col-span-8 md:col-start-2 md:col-span-6">
               {
                 <Markdown fileName="about">
-                  <div className="flex flex-col-reverse xl:flex-row justify-between items-center w-full min-h-full h-fit py-2 md:py-10 px-2 md:px-7">
-                    <div className="h-full w-full text-primary-greyish md:pr-8 text-lg">
+                  <div className="relative text-primary-greyish text-lg px-2 md:px-7 py-2 md:py-10">
+                    <p>
                       Hello! My name is <strong className="text-primary">Charbel</strong> and I
-                      enjoy creating things that live on the internet. Currently working as Software
-                      Integration Engineer at{' '}
+                      enjoy creating things that live on the internet. Currently working as a
+                      Software Integration Engineer at{' '}
                       <a className="text-primary" href="https://www.murex.com/en">
                         Murex
                       </a>
                       .
-                      <br />
-                      <br />
+                    </p>
+
+                    <br />
+
+                    {/* Floated image */}
+                    <div className="float-right ml-6 mb-4 w-40 md:w-60 border-4 border-primary rounded-lg">
+                      <img
+                        className="rounded-lg -translate-x-2 -translate-y-2 md:-translate-x-3 md:-translate-y-3"
+                        src="/images/profile2.jpeg"
+                        alt="Profile"
+                      />
+                    </div>
+
+                    <p>
                       Experienced in various areas of software development, with a primary focus on
                       web development. You can find related projects in
                       <strong className="text-primary"> projects.md</strong>.
-                      <br />
-                      <br />
+                    </p>
+
+                    <br />
+
+                    <p>
                       Academically, I graduated from the honors program with a
                       <strong className="text-primary"> 3.97 </strong>
                       CGPA, earned a place on the High Distinction list, and received the Honors
                       Award.
-                      <br />
-                      <br />
+                    </p>
+
+                    <br />
+
+                    <p>
                       Professionally, I currently work as an Integration Engineer, managing over
                       eighty internal and external systems both on-premises and in the cloud, using
                       Mulesoft and Anypoint. I have completed two software engineering internships
@@ -58,31 +76,25 @@ const AboutPage: NextPage = () => {
                       and{' '}
                       <a className="text-primary" href="https://www.ajjerni.com/">
                         Ajjerni
-                      </a>{' '}
+                      </a>
                       , where I deepened my experience in full-stack development.
-                      <br />
-                      <br />
-                      Here are a few technologies I've been working with recently:
-                      <div className="flex gap-16 md:gap-36 flex-col md:flex-row justify-start items-start md:items-center mt-10">
-                        <ul className="marker:text-primary list-inside list-disc underline">
-                          <li className="whitespace-nowrap">NextJs</li>
-                          <li className="whitespace-nowrap">NestJs</li>
-                          <li className="whitespace-nowrap">Strapi</li>
-                        </ul>
-                        <ul className="marker:text-primary list-inside list-disc underline">
-                          <li className="whitespace-nowrap">Flutter</li>
-                          <li className="whitespace-nowrap">Unity</li>
-                          <li className="whitespace-nowrap">MuleSoft</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="h-full flex justify-center items-center m-10">
-                      <div className="w-fit h-fit rounded-lg border-4 border-primary">
-                        <img
-                          className="rounded-lg -translate-x-3 -translate-y-3 md:-translate-y-5 md:-translate-x-5 "
-                          src="/images/profile2.jpeg"
-                        ></img>
-                      </div>
+                    </p>
+
+                    <br />
+
+                    <p>Here are a few technologies I've been working with recently:</p>
+
+                    <div className="flex gap-16 md:gap-36 flex-col md:flex-row justify-start items-start md:items-center mt-10">
+                      <ul className="marker:text-primary list-inside list-disc underline">
+                        <li className="whitespace-nowrap">NextJs</li>
+                        <li className="whitespace-nowrap">NestJs</li>
+                        <li className="whitespace-nowrap">Strapi</li>
+                      </ul>
+                      <ul className="marker:text-primary list-inside list-disc underline">
+                        <li className="whitespace-nowrap">Flutter</li>
+                        <li className="whitespace-nowrap">Unity</li>
+                        <li className="whitespace-nowrap">MuleSoft</li>
+                      </ul>
                     </div>
                   </div>
                 </Markdown>
